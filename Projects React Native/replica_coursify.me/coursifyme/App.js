@@ -1,62 +1,56 @@
-import React, { Component, useState } from "react";
-import { StyleSheet, View } from "react-native";
-import { Button, Icon, Input, Text } from "react-native-elements";
-import   Icon from "react-native-vector-icons/FontAwesome";
+import { Input } from '@react-native-elements/base';
+import { Button, Text } from '@react-native-elements/themed';
+import { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-class App extends Component{
-  constructor(props){
-    super(props);
-     const [email, setEmail] = useState(null)
-     const [password, setPassword] = useState(null)
-    
-    };
-    render(){
-    return(
-     <View style={styles.container}>
-      <Text h3> Entre no Cousifyme</Text>
-      <Input 
-      placeholder="E-mail"
-      leftIcon={{type: 'font-aesome', name: 'envelope'}}
-      onChangeText={value => setEmail(value)}
-      keyboardType="email-address"
-      />
-       <Input 
-      placeholder="Password"
-      leftIcon={{type: 'font-aesome', name: 'lock'}}
-      onChangeText={value => setPassword(value)}
-      secureTextEntry={true} 
-      />
-< Button 
-icon={
-  <Icon
-   name="arrow-right"
-   size={15}
-   color = 'white'
-   />
-}
-title="Entrar"
+export default function App() {
+  const [email, setEmail] = useState(null)
+  const [password, setPassword] = useState(null)
 
-/>
-
-
-      />
-    </View>  
-    );
+  const entrar = () => {
+    console.log('Entrou')
+    console.log(email)
+    console.log(password)
   }
 
+  return (
+    <View style={styles.container}>
+      <Text h3>Bem-vindo faça seu login</Text>
+      <Input
+        placeholder="E-mail"
+        leftIcon={{ type: 'font-awesome', name: 'envelope' }}
+        onChangeText={value => setEmail(value)}
+        keyboardType="email-address"
+      />
+      <Input
+        placeholder="Sua senha"
+        leftIcon={{ type: 'font-awesome', name: 'lock' }}
+        onChangeText={value => setPassword(value)}
+        secureTextEntry={true}
+      />
+      <Button
+        icon={
+          <Icon
+            name="check"
+            size={15}
+            color="white"
+          />
+        }
+        title="Entrar"
+        onPress={() => entrar()}
+      />
+      
+    </View>
+  );
 }
-    
 
-
-
-
-
-const syles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
-    flex:1,
-    backgroundColor:"#fff",
-    alignItems:'center',
-    justifyContent: 'center'
-  }
-})
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
