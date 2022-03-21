@@ -3,6 +3,7 @@ import { Button, Text } from '@react-native-elements/themed';
 import { useState } from 'react';
 import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { StyleSheet } from "react-native";
 import styles from '../style/MainStyle';
 
 
@@ -16,6 +17,9 @@ export default function Login({navigation}) {
           routes:[{name:"Principal"}]
       })
     
+  }
+  const cadastrar = () => {
+      navigation.navigate("Cadastro")
   }
 
   return (
@@ -42,10 +46,30 @@ export default function Login({navigation}) {
           />
         }
         title="Entrar"
+        buttonStyle={specificStyle.button}
         onPress={() => entrar()}
+      />
+        <Button
+        icon={
+          <Icon
+            name="check"
+            size={15}
+            color="white"
+          />
+        }
+        title="Cadastrar"
+        buttonStyle={specificStyle.button}
+        onPress={() => cadastrar()}
       />
       
     </View>
   );
 }
+
+const specificStyle = StyleSheet.create({
+    button:{
+        width: "100%",
+        marginTop:10
+    }
+})
 

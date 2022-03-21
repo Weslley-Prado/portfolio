@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Principal from './Screen/Principal';
 import { Image,   StyleSheet, View } from "react-native";
+import Cadastro from './Screen/Cadastro';
 
 
 const Stack = createStackNavigator();
@@ -13,6 +14,8 @@ export default function App() {
     <NavigationContainer>
        <Stack.Navigator>
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Cadastro" component={Cadastro} />
+
       <Stack.Screen
           name="Principal"
           component={Principal}
@@ -26,6 +29,7 @@ export default function App() {
             </View>,
                        
           }}        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
