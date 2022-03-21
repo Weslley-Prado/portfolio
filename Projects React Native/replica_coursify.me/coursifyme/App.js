@@ -1,49 +1,27 @@
-import { Input } from '@react-native-elements/base';
-import { Button, Text } from '@react-native-elements/themed';
-import { useState } from 'react';
-import { View } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import styles from './style/MainStyle';
+import React from 'react';
+import Login from './Screen/Login'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Principal from './Screen/Principal';
 
 
-export default function App() {
-  const [email, setEmail] = useState(null)
-  const [password, setPassword] = useState(null)
+const Stack = createStackNavigator();
 
-  const entrar = () => {
-    console.log('Entrou')
-    console.log(email)
-    console.log(password)
-  }
-
+function MyStack() {
   return (
-    <View style={styles.container}>
-      <Text h3>Bem-vindo faça seu login</Text>
-      <Input
-        placeholder="E-mail"
-        leftIcon={{ type: 'font-awesome', name: 'envelope' }}
-        onChangeText={value => setEmail(value)}
-        keyboardType="email-address"
-      />
-      <Input
-        placeholder="Sua senha"
-        leftIcon={{ type: 'font-awesome', name: 'lock' }}
-        onChangeText={value => setPassword(value)}
-        secureTextEntry={true}
-      />
-      <Button
-        icon={
-          <Icon
-            name="check"
-            size={15}
-            color="white"
-          />
-        }
-        title="Entrar"
-        onPress={() => entrar()}
-      />
-      
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Principal" component={Principal} />
+
+     
+    </Stack.Navigator>
   );
 }
 
+export default function App() {
+  return (
+    <NavigationContainer>
+      <MyStack />
+    </NavigationContainer>
+  );
+}
