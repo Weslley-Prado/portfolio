@@ -1,8 +1,9 @@
 import { Input } from '@react-native-elements/base';
 import { Button, Text } from '@react-native-elements/themed';
 import { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import styles from './style/MainStyle';
 
 
 export default function App() {
@@ -46,11 +47,3 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
