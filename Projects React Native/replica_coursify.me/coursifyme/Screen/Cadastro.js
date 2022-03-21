@@ -31,9 +31,7 @@ export default function Cadastro({navigation}) {
           error = true
       }
       return !error
-      }
-
-  
+      }  
 
 
   const salvar = () => {
