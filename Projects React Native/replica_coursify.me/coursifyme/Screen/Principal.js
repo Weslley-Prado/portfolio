@@ -6,12 +6,8 @@ import { View,  SafeAreaView, StyleSheet } from "react-native";
 export default function Principal(){
     return(
         <SafeAreaView>
-        <View>
-            <Image
-            source={require('../assets/logo.png')}
-            style={{width:170, height:130}}
-            resizeMode="contain"
-             />
+        <View style={styles.header}>
+           
         </View>
         </SafeAreaView>
        
@@ -26,7 +22,8 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         paddingLeft: 10,
         borderBottomWidth:2,
-        borderBottomColor:'#FFF'
+        borderBottomColor:'#FFF',
+        backgroundColor:'white'
 
     }
 })
