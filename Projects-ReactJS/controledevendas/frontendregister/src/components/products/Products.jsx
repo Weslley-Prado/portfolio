@@ -57,23 +57,44 @@ export default class Product extends Component {
                 <div className="row">
                     <div className="col-12 col-md-6">
                         <div className="form-group">
-                            <label>Nome</label>
+                            <label>Produto</label>
                             <input type="text" className="form-control"
                                 name="name"
                                 value={this.state.user.name}
                                 onChange={e => this.updateField(e)}
-                                placeholder="Digite o nome..." />
+                                placeholder="Digite o nome do produto..." />
                         </div>
                     </div>
 
                     <div className="col-12 col-md-6">
                         <div className="form-group">
-                            <label>E-mail</label>
+                            <label>Marca</label>
                             <input type="text" className="form-control"
                                 name="email"
                                 value={this.state.user.email}
                                 onChange={e => this.updateField(e)}
-                                placeholder="Digite o e-mail..." />
+                                placeholder="Digite a marca..." />
+                        </div>
+                    </div>
+                    <div className="col-12 col-md-6">
+                        <div className="form-group">
+                            <label>Quantidade</label>
+                            <input type="text" className="form-control"
+                                name="Quantidade"
+                                value={this.state.user.email}
+                                onChange={e => this.updateField(e)}
+                                placeholder="0" />
+                        </div>
+                        
+                    </div>
+                    <div className="col-12 col-md-6">
+                        <div className="form-group">
+                            <label>Preço</label>
+                            <input type="text" className="form-control"
+                                name="Preço"
+                                value={this.state.user.email}
+                                onChange={e => this.updateField(e)}
+                                placeholder="0" />
                         </div>
                     </div>
                 </div>
@@ -113,8 +134,10 @@ export default class Product extends Component {
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nome</th>
-                        <th>E-mail</th>
+                        <th>Produto</th>
+                        <th>Marca</th>
+                        <th>Quantidade</th>
+                        <th>Preço Unitario</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
