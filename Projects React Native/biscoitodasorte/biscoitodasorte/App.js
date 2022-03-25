@@ -19,7 +19,7 @@ class App extends Component{
     this.quebraBiscoito = this.quebraBiscoito.bind(this);
 
     this.frases = [
-   
+  
 
     ];
 
