@@ -14,8 +14,11 @@ import {MatCardModule} from '@angular/material/card'
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
-import {MatButtonModule} from '@angular/material/button'
-import {MatSnackBarModule} from '@angular/material/snack-bar'
+import { MatButtonModule } from '@angular/material/button'
+import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
 
 import {HttpClientModule} from '@angular/common/http'
 
@@ -39,7 +42,11 @@ import {HttpClientModule} from '@angular/common/http'
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
