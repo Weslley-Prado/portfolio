@@ -4,6 +4,8 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 
+
+
 const routes: Routes = [{
   path:"",
   component: HomeComponent
